@@ -10,7 +10,6 @@ ENV SOAPUI_VERSION="5.2.1" \
   MOCK_BIN="mockservicerunner.sh"
 
 RUN wget http://cdn01.downloads.smartbear.com/soapui/$SOAPUI_VERSION/SoapUI-$SOAPUI_VERSION-linux-bin.tar.gz && \
-  echo "ba51c369cee1014319146474334fb4e1 SoapUI-5.2.1-linux-bin.tar.gz" | md5sum -c && \
   tar -xzf SoapUI-5.2.1-linux-bin.tar.gz -C /opt/ && \
 mv /opt/SoapUI-5.2.1 /opt/soapui && \
   echo "0 1 * * * rm -f /root/*.log" >> /etc/crontabs/root && \
